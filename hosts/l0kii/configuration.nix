@@ -3,13 +3,24 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
   
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 15d";
+    };
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [ "nix-command" "flakes" ];
+    };
+  };
+
   nixpkgs.config.allowUnfree = true;
   
   # Bootloader.
@@ -71,14 +82,34 @@
   hardware.nvidia.prime.nvidiaBusId = "PCI:1:0:0";
   hardware.nvidia.prime.amdgpuBusId = "PCI:6:0:0";
 
+  # specialisation = {
+  #   external-display.configuration = {
+  #     system.nixos.tags = [ "external-display" ];
+  #     hardware.nvidia.prime.offload.enable = pkgs.lib.mkForce false;
+  #     hardware.nvidia.powerManagement.enable = pkgs.lib.mkForce false;
+  #   };
+  # };
+
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm = {
+    enable = true;
+  };
   services.xserver.desktopManager.gnome.enable = true;
+
+  programs.hyprland = {
+    enable = true;
+
+    xwayland = {
+      enable = true;
+      hidpi = false;
+    };
+    nvidiaPatches = true;
+  };
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "es";
-    xkbVariant = "";
+    layout = "latam,us";
+    xkbVariant = ",altgr-intl";
   };
 
   # Configure console keymap
@@ -107,7 +138,11 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  programs.zsh.enable = true;
+  programs = {
+    zsh = {
+      enable = true;
+    };
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.saidgeek = {
@@ -115,22 +150,37 @@
     description = "saidgeek";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      git
-      spotify
-      wezterm
-      neovim
-      google-chrome
-    ];
   };
+
+
+  fonts.fonts = with pkgs; [
+    google-fonts
+    noto-fonts
+    noto-fonts-emoji
+    noto-fonts-extra
+    (
+      nerdfonts.override {
+        fonts = [
+          "VictorMono"
+          "Noto"
+          "Hack"
+          "Ubuntu"
+        ];
+      }
+    ) 
+  ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    git
+    wget
     gnome-extension-manager
     zsh
+    gcc
+    xclip
+    neovim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -147,10 +197,9 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  networking.firewall.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
