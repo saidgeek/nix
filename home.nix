@@ -8,6 +8,7 @@
     wezterm
     spotify
     google-chrome
+    qutebrowser
     obsidian
     gotop 
     flameshot
