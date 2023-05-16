@@ -59,10 +59,10 @@
 
   programs.tmux = {
     enable = true;
-    baseIndex = 1;
     plugins = with pkgs; [
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.catppuccin
     ];
+    extraConfig = builtins.readFile ./config/tmux.conf;
   };
 }
