@@ -1,8 +1,13 @@
 {pkgs, config, lib, ...}: {
 
+  imports = [
+    ./home/modules/hyprland.nix
+  ];
+
   home.username = "saidgeek";
   home.homeDirectory = "/home/saidgeek";
   home.stateVersion = "22.11";
+  # TODO: move this to other file to be common
   home.packages = with pkgs; [
     git
     wezterm
@@ -65,4 +70,6 @@
     ];
     extraConfig = builtins.readFile ./config/tmux.conf;
   };
+
+  services.dunst.enable = true;
 }

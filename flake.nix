@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { nixpkgs, home-manager, ... }: 
+  outputs = { nixpkgs, home-manager, hyprland, ... }: 
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -41,9 +42,10 @@
     };
 
     homeConfigurations = {
-      saidgeek = home-manager.lib.homeManagerConfiguration {
+      "saidgeek@l0kii" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
+          hyprland.homeManagerModules.default
           ./home.nix
         ];
       };

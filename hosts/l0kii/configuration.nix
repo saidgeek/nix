@@ -94,21 +94,15 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm = {
-    enable = true;
+  # services.xserver.windowManager.bspwm.enable = true;
+  services.xserver.displayManager = {
+    gdm = {
+      enable = true;
+    };
   };
   # services.xserver.desktopManager.gnome.enable = true;
 
-  programs.hyprland = {
-    enable = true;
-
-    xwayland = {
-      enable = true;
-      hidpi = false;
-    };
-    nvidiaPatches = true;
-  };
+  programs.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
