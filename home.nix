@@ -28,9 +28,10 @@
     gcc
     jq
     neovim
+    python3
 
     # hyprland
-    waybar
+    eww
     wofi
   ];
 
@@ -72,6 +73,7 @@
   };
 
   services.dunst.enable = true;
+  # FIXME: replace this applets for custom implementations
   services.network-manager-applet.enable = true;
   services.blueman-applet.enable = true;
 }
