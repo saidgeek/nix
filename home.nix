@@ -31,7 +31,7 @@
     python3
 
     # hyprland
-    eww
+    eww-wayland
     wofi
   ];
 
