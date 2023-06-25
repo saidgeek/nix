@@ -56,7 +56,7 @@
   time.timeZone = "America/Santiago";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "es_MX.UTF-8";
+  i18n.defaultLocale = "es_CL.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "es_CL.UTF-8";
@@ -78,6 +78,7 @@
   hardware.opengl.driSupport = true;
   hardware.opengl.driSupport32Bit = true;
 
+  # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.prime.offload.enable = true;
   hardware.nvidia.prime.nvidiaBusId = "PCI:1:0:0";
@@ -92,18 +93,15 @@
   # };
 
 # bluetooth
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
+  # hardware.bluetooth.enable = true;
+  # services.blueman.enable = true;
 
   # services.xserver.windowManager.bspwm.enable = true;
-  services.xserver.displayManager = {
-    gdm = {
-      enable = true;
-    };
-  };
-  # services.xserver.desktopManager.gnome.enable = true;
+  # programs.hyprland.enable = true;
+  # programs.xwayland.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
-  programs.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -149,6 +147,10 @@
     description = "saidgeek";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
+    packages = [
+      pkgs.google-chrome
+      pkgs.home-manager
+    ];
   };
 
 
@@ -175,11 +177,11 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
     wget
-    # gnome-extension-manager
     zsh
+    cmake
     gcc
     xclip
-    neovim
+    vim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

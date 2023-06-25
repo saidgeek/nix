@@ -1,7 +1,7 @@
-{pkgs, config, lib, ...}: {
+{ pkgs, config, lib, ... }: {
 
   imports = [
-    ./home/modules/hyprland.nix
+    # ./home/modules/hyprland.nix
   ];
 
   home.username = "saidgeek";
@@ -12,34 +12,67 @@
     git
     wezterm
     spotify
-    google-chrome
-    qutebrowser
+    vlc
     obsidian
-    gotop 
+    gotop
     flameshot
     discord
-    nodejs
-    nodePackages.npm
     fzf
     ripgrep
     unzip
-    rustup
     exa
     gcc
     jq
-    neovim
-    python3
+    neovim 
+    emacsPackages.vterm
+    firefox
 
-    # hyprland
-    eww-wayland
-    wofi
+    # gnome
+    gnomeExtensions.pop-shell
+
+    # languages 
+    ## javascript / typescript
+    nodejs
+    nodePackages.npm
+    nodePackages.typescript-language-server
+
+    ## rust
+    rustup
+
+    ## python
+    # python3
+    # python310Packages.pip
+
+    ## nix
+    rnix-lsp
+
+    ## Lua
+    luajit
+    lua-language-server
+    stylua
   ];
 
   home.shellAliases = {
     nv = "nvim";
+    l = "exa --group-directories-first -h --git --icons -l -a";
   };
 
-  programs.home-manager.enable = true;
+  # programs.home-manager.enable = true;
+
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode;
+    enableUpdateCheck= true;
+    extensions = with pkgs.vscode-extensions; [
+      catppuccin.catppuccin-vsc
+      catppuccin.catppuccin-vsc-icons  
+      bbenoist.nix
+    ];
+    userSettings = {
+      "workbench.colorTheme" = "Catppuccin Macchiato";
+      "workbench.iconTheme" ="catppuccin-macchiato";
+    };
+  };
 
   programs.zsh = {
     enable = true;
@@ -61,7 +94,7 @@
       pull.rebase = true;
       core.editor = "nvim";
     };
-  }; 
+  };
 
   programs.tmux = {
     enable = true;
@@ -72,8 +105,8 @@
     extraConfig = builtins.readFile ./config/tmux.conf;
   };
 
-  services.dunst.enable = true;
-  # FIXME: replace this applets for custom implementations
-  services.network-manager-applet.enable = true;
-  services.blueman-applet.enable = true;
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs;
+  };
 }
