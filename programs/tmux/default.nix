@@ -1,6 +1,6 @@
 { pkgs, ... }: 
 let
-  config = builtins.readFile ../config/tmux.conf;
+  config = builtins.readFile ./tmux.conf;
 in {
   programs.tmux = {
     enable = true;
