@@ -1,60 +1,6 @@
 {
-  "workbench.colorTheme": "Catppuccin Macchiato",
-  "workbench.iconTheme": "catppuccin-macchiato",
-  "nix": {
-    "serverPath": "rnix-lsp",
-    "formatterPath": "nixpkgs-fmt"
-  },
-  "explorer.confirmDragAndDrop": false,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true,
-  "security.workspace.trust.banner": "never",
-  "todohighlight.isEnable": true,
-  "editor.fontFamily": "'Iosevka Sidgeek V1', Consolas, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "terminal.integrated.fontFamily": "monospace",
-  "editor.fontSize": 14,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.tabSize": 2,
-  "editor.minimap.enabled": false,
-  "todohighlight.keywords": [
-    {
-      "text": "NOTE:",
-      "color": "#ffffff",
-      "backgroundColor": "#D1663F",
-      "overviewRulerColor": "gray"
-    },
-    {
-      "text": "IDEA:",
-      "color": "#232323",
-      "backgroundColor": "#E9F02E"
-    },
-    {
-      "text": "REMOVE:",
-      "color": "#ffffff",
-      "backgroundColor": "#D1663F"
-    }
-  ],
-  "workbench.startupEditor": "none",
-  "editor.autoClosingQuotes": "always",
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "typescript": "typescriptreact",
-    "svelte": "html",
-    "astro": "html"
-  },
-  "tailwindCSS.includeLanguages": {
-    "typescript": "javascript",
-    "typescriptreact": "javascript",
-    "svelte": "html",
-    "astro": "html"
-  },
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -62,37 +8,78 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[svelte]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "svelte.enable-ts-plugin": true,
-  "editor.inlineSuggest.enabled": true,
-  "workbench.sideBar.location": "right",
-  "window.dialogStyle": "custom",
-  "explorer.confirmDelete": false,
-  "terminal.integrated.scrollback": 100000000,
-  "svelte.plugin.svelte.note-new-transformation": false,
-  "workbench.editor.enablePreviewFromQuickOpen": true,
-  "editor.renderWhitespace": "all",
-  "editor.wordWrapColumn": 100,
-  "terminal.integrated.tabs.location": "left",
-  "workbench.editor.titleScrollbarSizing": "large",
-  "window.menuBarVisibility": "toggle",
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": true,
-    "markdown": false
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "liveServer.settings.donotShowInfoMsg": true,
-  "terminal.integrated.fontSize": 11,
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  }
+  "breadcrumbs.enabled": false,
+  "editor.autoClosingQuotes": "always",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": true,
+  "editor.fontFamily": "VictorMono Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.guides.bracketPairs": true,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 120,
+  "emmet.includeLanguages": {
+    "astro": "html",
+    "javascript": "javascriptreact",
+    "svelte": "html",
+    "typescript": "typescriptreact"
+  },
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "nix.formatterPath": "nixpkgs-fmt",
+  "nix.serverPath": "rnix-lsp",
+  "security.workspace.trust.banner": "never",
+  "svelte.enable-ts-plugin": true,
+  "tailwindCSS.includeLanguages": {
+    "astro": "html",
+    "svelte": "html",
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+  "terminal.integrated.fontFamily": "Noto Nerd Font",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.scrollback": 100000000,
+  "terminal.integrated.tabs.location": "left",
+  "todohighlight.isEnable": true,
+  "todohighlight.keywords": [
+    {
+      "backgroundColor": "#D1663F",
+      "color": "#ffffff",
+      "overviewRulerColor": "gray",
+      "text": "NOTE:"
+    },
+    {
+      "backgroundColor": "#E9F02E",
+      "color": "#232323",
+      "text": "IDEA:"
+    },
+    {
+      "backgroundColor": "#D1663F",
+      "color": "#ffffff",
+      "text": "REMOVE:"
+    }
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.dialogStyle": "custom",
+  "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "custom",
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "editor.scrollbar.vertical": "hidden",
+  "workbench.editor.showTabs": false,
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.glyphMargin": false
 }

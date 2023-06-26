@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 let
   settings = builtins.fromJSON (builtins.readFile ./settings.json);
+  keybindings = builtins.fromJSON (builtins.readFile ./keybindings.json);
+
   exts = with pkgs.vscode-extensions; [
     catppuccin.catppuccin-vsc
     catppuccin.catppuccin-vsc-icons
@@ -37,6 +39,7 @@ in
     enableUpdateCheck = true;
     mutableExtensionsDir = false;
     extensions = exts;
+    keybindings = keybindings;
     userSettings = settings;
   };
 }
