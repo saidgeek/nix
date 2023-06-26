@@ -7,48 +7,46 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, ... }: 
-  let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config = {
-        allowUnfree = true;
-        overlays = [
+  outputs = { nixpkgs, home-manager, ... }:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config = {
+          allowUnfree = true;
+          overlays = [
             (self: super: {
               fcitx-engines = pkgs.fcitx5;
             })
           ];
+        };
       };
-    };
-    lib = nixpkgs.lib;
-  in
-  {
-    
-    nixosConfigurations = {
-      l0kii = lib.nixosSystem {
-        inherit system;
-        modules = [
-          {
-            imports = [
-              ./hosts/l0kii/configuration.nix
-            ];
-          }
-	     ];
-      };
-    };
+      lib = nixpkgs.lib;
+    in
+    {
 
-    homeConfigurations = {
-      "saidgeek@l0kii" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          hyprland.homeManagerModules.default
-          ./home.nix
-        ];
+      nixosConfigurations = {
+        l0kii = lib.nixosSystem {
+          inherit system;
+          modules = [
+            {
+              imports = [
+                ./hosts/l0kii/configuration.nix
+              ];
+            }
+          ];
+        };
+      };
+
+      homeConfigurations = {
+        "saidgeek@l0kii" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./home.nix
+          ];
+        };
       };
     };
-  };
 }

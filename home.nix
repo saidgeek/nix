@@ -1,7 +1,11 @@
 { pkgs, config, lib, ... }: {
 
   imports = [
-    # ./home/modules/hyprland.nix
+    ./programs/zsh.nix
+    ./programs/git.nix
+    ./programs/emacs.nix
+    ./programs/tmux.nix
+    ./programs/vscode
   ];
 
   home.username = "saidgeek";
@@ -23,7 +27,7 @@
     exa
     gcc
     jq
-    neovim 
+    neovim
     emacsPackages.vterm
     firefox
 
@@ -45,6 +49,7 @@
 
     ## nix
     rnix-lsp
+    nixpkgs-fmt
 
     ## Lua
     luajit
@@ -58,55 +63,4 @@
   };
 
   # programs.home-manager.enable = true;
-
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscode;
-    enableUpdateCheck= true;
-    extensions = with pkgs.vscode-extensions; [
-      catppuccin.catppuccin-vsc
-      catppuccin.catppuccin-vsc-icons  
-      bbenoist.nix
-    ];
-    userSettings = {
-      "workbench.colorTheme" = "Catppuccin Macchiato";
-      "workbench.iconTheme" ="catppuccin-macchiato";
-    };
-  };
-
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
-    oh-my-zsh = {
-      enable = true;
-      theme = "robbyrussell";
-    };
-  };
-
-  programs.git = {
-    enable = true;
-    userName = "saidgeek";
-    userEmail = "me@saidgeek.land";
-    extraConfig = {
-      init.defaultBranch = "main";
-      pull.rebase = true;
-      core.editor = "nvim";
-    };
-  };
-
-  programs.tmux = {
-    enable = true;
-    plugins = with pkgs; [
-      tmuxPlugins.vim-tmux-navigator
-      tmuxPlugins.catppuccin
-    ];
-    extraConfig = builtins.readFile ./config/tmux.conf;
-  };
-
-  programs.emacs = {
-    enable = true;
-    package = pkgs.emacs;
-  };
 }
