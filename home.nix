@@ -3,6 +3,7 @@
   imports = [
     ./programs/zsh.nix
     ./programs/git.nix
+    ./programs/direnv.nix
     ./programs/emacs.nix
     ./programs/tmux
     ./programs/vscode
@@ -39,9 +40,6 @@
     nodejs
     nodePackages.npm
     nodePackages.typescript-language-server
-
-    ## rust
-    rustup
 
     ## python
     # python3

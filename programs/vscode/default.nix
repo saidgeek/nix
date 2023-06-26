@@ -17,6 +17,7 @@ let
     mikestead.dotenv
     astro-build.astro-vscode
     bungcip.better-toml
+    ms-python.python
   ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
       publisher = "wayou";
@@ -29,6 +30,12 @@ let
       name = "postcss";
       version = "1.0.9";
       sha256 = "sha256-5pGDKme46uT1/35WkTGL3n8ecc7wUBkHVId9VpT7c2U=";
+    }
+    {
+      publisher = "rubymaniac";
+      name = "vscode-direnv";
+      version = "0.0.2";
+      sha256 = "sha256-TVvjKdKXeExpnyUh+fDPl+eSdlQzh7lt8xSfw1YgtL4=";
     }
   ];
 in
