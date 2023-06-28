@@ -76,7 +76,7 @@
   "window.menuBarVisibility": "toggle",
   "window.titleBarStyle": "custom",
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Palenight (Mild Contrast)",
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "editor.scrollbar.vertical": "hidden",
   "workbench.editor.showTabs": false,
@@ -85,5 +85,10 @@
   "workbench.startupEditor": "none",
   "editor.overviewRulerBorder": false,
   "editor.hideCursorInOverviewRuler": true,
-  "editor.glyphMargin": false
+  "editor.glyphMargin": false,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true
 }

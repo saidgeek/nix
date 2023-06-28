@@ -18,6 +18,7 @@ let
     astro-build.astro-vscode
     bungcip.better-toml
     ms-python.python
+    vscodevim.vim
   ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
       publisher = "wayou";
@@ -36,6 +37,12 @@ let
       name = "vscode-direnv";
       version = "0.0.2";
       sha256 = "sha256-TVvjKdKXeExpnyUh+fDPl+eSdlQzh7lt8xSfw1YgtL4=";
+    }
+    {
+      publisher = "whizkydee";
+      name = "material-palenight-theme";
+      version = "2.0.3";
+      sha256 = "sha256-qz2pz9JlnO2OV3eJnRqzbcic1lzpl0ViygwhNjZOWpI=";
     }
   ];
 in
