@@ -44,6 +44,18 @@ let
       version = "2.0.3";
       sha256 = "sha256-qz2pz9JlnO2OV3eJnRqzbcic1lzpl0ViygwhNjZOWpI=";
     }
+    {
+      publisher = "whizkydee";
+      name = "material-palenight-theme";
+      version = "2.0.3";
+      sha256 = "sha256-qz2pz9JlnO2OV3eJnRqzbcic1lzpl0ViygwhNjZOWpI=";
+    }
+    {
+      publisher = "hideoo";
+      name = "create";
+      version = "0.2.0";
+      sha256 = "sha256-wIqh3rCKj0QfqFmev+hAePnIB2Pp74G3SYIOpPifG5I=";
+    }
   ];
 in
 {
