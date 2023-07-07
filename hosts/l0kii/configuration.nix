@@ -5,10 +5,11 @@
 { config, pkgs, ... }:
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-  
+
   nix = {
     gc = {
       automatic = true;
@@ -22,11 +23,11 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot.loader.efi.efiSysMountPoint = "/boot";
 
 
 
@@ -81,7 +82,7 @@
   #   };
   # };
 
-# bluetooth
+  # bluetooth
   # hardware.bluetooth.enable = true;
   # services.blueman.enable = true;
 
@@ -157,13 +158,13 @@
           "Ubuntu"
         ];
       }
-    ) 
+    )
   ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
     wget
     zsh
