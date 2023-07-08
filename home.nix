@@ -12,6 +12,7 @@
   home.username = "saidgeek";
   home.homeDirectory = "/home/saidgeek";
   home.stateVersion = "22.11";
+
   # TODO: move this to other file to be common
   home.packages = with pkgs; [
     git
@@ -54,6 +55,13 @@
     lua-language-server
     stylua
   ];
+
+  ## reference: https://hoverbear.org/blog/declarative-gnome-configuration-in-nixos/
+  dconf.settings = {
+    "org/gnome/mutter" = {
+      experimental-features = [ "scale-monitor-framebuffer" ];
+    };
+  };
 
   home.shellAliases = {
     nv = "nvim";
