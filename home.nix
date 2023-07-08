@@ -62,11 +62,5 @@
       experimental-features = [ "scale-monitor-framebuffer" ];
     };
   };
-
-  home.shellAliases = {
-    nv = "nvim";
-    l = "exa --group-directories-first -h --git --icons -l -a";
-  };
-
   # programs.home-manager.enable = true;
 }
