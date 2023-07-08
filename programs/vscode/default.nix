@@ -1,8 +1,5 @@
 { config, pkgs, ... }:
 let
-  settings = builtins.fromJSON (builtins.readFile ./settings.json);
-  keybindings = builtins.fromJSON (builtins.readFile ./keybindings.json);
-
   exts = with pkgs.vscode-extensions; [
     catppuccin.catppuccin-vsc
     catppuccin.catppuccin-vsc-icons
@@ -59,13 +56,14 @@ let
   ];
 in
 {
+  xdg.configFile."Code/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/programs/vscode/settings.json";
+  xdg.configFile."Code/User/keybindings.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/programs/vscode/keybindings.json";
+
   programs.vscode = {
     enable = true;
     package = pkgs.vscode;
     enableUpdateCheck = true;
     mutableExtensionsDir = true;
     extensions = exts;
-    keybindings = keybindings;
-    userSettings = settings;
   };
 }
