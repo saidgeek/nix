@@ -1,7 +1,7 @@
 { pkgs, config, lib, ... }: {
 
   imports = [
-    ./programs/zsh.nix
+    ./programs/shell.nix
     ./programs/git.nix
     ./programs/direnv.nix
     ./programs/emacs.nix

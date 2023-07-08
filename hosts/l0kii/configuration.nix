@@ -148,7 +148,7 @@
     isNormalUser = true;
     description = "saidgeek";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
     packages = [
       pkgs.google-chrome
       pkgs.home-manager

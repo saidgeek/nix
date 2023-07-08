@@ -48,8 +48,8 @@
     "typescript": "javascript",
     "typescriptreact": "javascript"
   },
-  "terminal.integrated.fontFamily": "Noto Nerd Font",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "NotoMono Nerd Font",
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.scrollback": 100000000,
   "terminal.integrated.tabs.location": "left",
   "todohighlight.isEnable": true,
@@ -88,8 +88,15 @@
   "editor.glyphMargin": false,
   "vim.easymotion": true,
   "vim.incsearch": true,
-  "vim.useCtrlKeys": true,
+  "vim.useCtrlKeys": false,
   "vim.leader": "<space>",
   "vim.useSystemClipboard": true,
-  "vim.hlsearch": true
+  "vim.hlsearch": true,
+  "window.zoomLevel": 0.6,
+  "terminal.integrated.profiles.linux": {
+    "nushell": {
+      "path": "/home/saidgeek/.nix-profile/bin/nu"
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "nushell"
 }
