@@ -7,6 +7,7 @@
     ./programs/emacs.nix
     ./programs/tmux
     ./programs/vscode
+    ./programs/wezterm.nix
   ];
 
   home.username = "saidgeek";
@@ -16,7 +17,6 @@
   # TODO: move this to other file to be common
   home.packages = with pkgs; [
     git
-    wezterm
     spotify
     vlc
     obsidian
