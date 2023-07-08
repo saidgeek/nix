@@ -3,6 +3,7 @@
     enable = true;
   };
 
+  ## NOTE: It is possible to move this config to its own Nix file afterward
   programs.nushell = {
     enable = true;
     shellAliases = {
