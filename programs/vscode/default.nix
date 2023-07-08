@@ -63,7 +63,7 @@ in
     enable = true;
     package = pkgs.vscode;
     enableUpdateCheck = true;
-    mutableExtensionsDir = false;
+    mutableExtensionsDir = true;
     extensions = exts;
     keybindings = keybindings;
     userSettings = settings;
