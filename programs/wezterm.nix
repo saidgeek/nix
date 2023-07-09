@@ -3,9 +3,12 @@
     enable = true;
     extraConfig = ''
       return {
+        initial_cols = 110;
+        initial_rows = 35;
         color_scheme = 'Palenight (Gogh)',
         font = wezterm.font("NotoMono Nerd Font", { weight = 'Bold' }),
         font_size = 10.0,
+        window_background_opacity = 0.8;
         window_padding = {
           left = 2,
           right = 2,
