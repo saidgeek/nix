@@ -86,6 +86,9 @@
   hardware.nvidia.prime.nvidiaBusId = "PCI:1:0:0";
   hardware.nvidia.prime.amdgpuBusId = "PCI:6:0:0";
 
+  hardware.logitech.wireless.enable = true;
+  hardware.logitech.wireless.enableGraphical = true;
+
   # specialisation = {
   #   external-display.configuration = {
   #     system.nixos.tags = [ "external-display" ];
