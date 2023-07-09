@@ -104,5 +104,6 @@
   "workbench.editor.showTabs": false,
   "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.sideBar.location": "right",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "editor.lineNumbers": "relative"
 }
