@@ -10,6 +10,7 @@
     ./programs/tmux
     ./programs/vscode
     ./programs/wezterm.nix
+    ./programs/gnome.nix
   ];
 
   home.username = "saidgeek";
@@ -18,7 +19,6 @@
 
   # TODO: move this to other file to be common
   home.packages = with pkgs; [
-    git
     spotify
     vlc
     obsidian
@@ -34,9 +34,6 @@
     neovim
     emacsPackages.vterm
     firefox
-
-    # gnome
-    gnomeExtensions.pop-shell
 
     # languages 
     ## javascript / typescript
@@ -58,11 +55,5 @@
     stylua
   ];
 
-  ## reference: https://hoverbear.org/blog/declarative-gnome-configuration-in-nixos/
-  dconf.settings = {
-    "org/gnome/mutter" = {
-      experimental-features = [ "scale-monitor-framebuffer" ];
-    };
-  };
   # programs.home-manager.enable = true;
 }
