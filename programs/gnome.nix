@@ -48,7 +48,7 @@
       favorite-apps = [
         "firefox.desktop"
         "code.desktop"
-        "wezterm.desktop"
+        "org.wezfurlong.wezterm.desktop"
         "spotify.desktop"
       ];
       disable-user-extensions = false;
