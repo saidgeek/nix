@@ -34,6 +34,7 @@
     neovim
     emacsPackages.vterm
     firefox
+    whatsapp-for-linux
 
     # languages 
     ## javascript / typescript
