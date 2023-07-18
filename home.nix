@@ -11,6 +11,7 @@
     ./programs/vscode
     ./programs/wezterm.nix
     ./programs/gnome.nix
+    ./programs/thunderbird.nix
   ];
 
   home.username = "saidgeek";
