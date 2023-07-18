@@ -12,7 +12,7 @@
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
   "[svelte]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -67,7 +67,6 @@
     }
   },
   "terminal.integrated.scrollback": 100000000,
-  "terminal.integrated.tabs.location": "left",
   "todohighlight.isEnable": true,
   "todohighlight.keywords": [
     {
@@ -94,16 +93,23 @@
   "vim.leader": "<space>",
   "vim.useCtrlKeys": false,
   "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    }
+  ],
   "window.dialogStyle": "custom",
   "window.menuBarVisibility": "toggle",
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": 0.6,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Palenight (Mild Contrast)",
+  "workbench.colorTheme": "Andromeda Bordered",
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.showTabs": false,
   "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "terminal.integrated.tabs.location": "left",
+  "window.zoomLevel": 1
 }
