@@ -36,6 +36,7 @@
     emacsPackages.vterm
     firefox
     whatsapp-for-linux
+    figma-linux
 
     # languages 
     ## javascript / typescript
