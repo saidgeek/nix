@@ -103,13 +103,13 @@
   "window.menuBarVisibility": "toggle",
   "window.titleBarStyle": "custom",
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Andromeda Bordered",
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.showTabs": false,
-  "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "editor.lineNumbers": "relative",
   "terminal.integrated.tabs.location": "left",
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.colorTheme": "Andromeda Bordered"
 }
