@@ -146,11 +146,11 @@
     };
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a  account. Don't forget to set a password with ‘passwd’.
   users.users.saidgeek = {
     isNormalUser = true;
     description = "saidgeek";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.nushell;
     packages = [
       pkgs.google-chrome
@@ -190,10 +190,8 @@
   ];
 
   virtualisation = {
-    podman = {
+    docker = {
       enable = true;
-      dockerCompat = true;
-      defaultNetwork.settings.dns_enabled = true;
     };
   };
 

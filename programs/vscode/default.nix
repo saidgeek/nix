@@ -16,6 +16,7 @@ let
     bungcip.better-toml
     ms-python.python
     vscodevim.vim
+    prisma.prisma
   ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
       publisher = "wayou";
