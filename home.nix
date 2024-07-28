@@ -1,17 +1,15 @@
 { pkgs, config, lib, ... }: {
 
   imports = [
+    ./programs/git.nix
     ./programs/starship.nix
     ./programs/nushell.nix
     ./programs/zsh.nix
-    ./programs/git.nix
     ./programs/direnv.nix
     ./programs/emacs.nix
     ./programs/tmux
-    ./programs/vscode
     ./programs/wezterm.nix
     ./programs/gnome.nix
-    ./programs/thunderbird.nix
   ];
 
   home.username = "saidgeek";
@@ -35,8 +33,7 @@
     neovim
     emacsPackages.vterm
     firefox
-    whatsapp-for-linux
-    figma-linux
+    fastfetch
 
     # languages 
     ## javascript / typescript
