@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, ... }: {
   programs.nushell = {
     enable = true;
     shellAliases = {
@@ -12,7 +12,7 @@
       DIRENV_LOG_FORMAT = "\"\"";
     };
     extraConfig = ''
-      let-env config = {
+      $env.config = {
         show_banner: false,
       }
 
