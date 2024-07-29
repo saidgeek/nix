@@ -3,14 +3,14 @@
     enable = true;
     settings = {
       character = {
-        success_symbol = "[](bold green)";
-        error_symbol = "[ ](bold red)";
+        success_symbol = "[➜](bold green)";
+        error_symbol = "[ ➜](bold red)";
       };
       nix_shell = {
         symbol = "❄️";
-        impure_msg = "[!](bold red)";
+        impure_msg = "[!➜](bold red)";
         pure_msg = "";
-        unknown_msg = "[?](bold green)";
+        unknown_msg = "[?➜](bold green)";
         format = "[$symbol$state](bold blue) ";
       };
       custom.direnv = {
