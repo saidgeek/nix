@@ -10,6 +10,7 @@
     ./programs/tmux
     ./programs/wezterm.nix
     ./programs/gnome.nix
+    ./programs/neovim.nix
   ];
 
   home.username = "saidgeek";
@@ -23,6 +24,7 @@
     obsidian
     gotop
     flameshot
+    gcolor3
     discord
     fzf
     ripgrep
@@ -31,7 +33,6 @@
     eza
     gcc
     jq
-    neovim
     emacsPackages.vterm
     firefox
     google-chrome
