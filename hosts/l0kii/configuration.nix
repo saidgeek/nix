@@ -25,21 +25,8 @@
   nixpkgs.config.allowUnfree = true;
 
   # Bootloader.
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot/efi";
-    };
-    grub = {
-      enable = true;
-      efiSupport = true;
-      device = "nodev";
-      useOSProber = true;
-      fontSize = 16;
-      gfxmodeEfi = "1440x900";
-      gfxmodeBios = "1440x900";
-    };
-  };
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "l0kii"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -151,7 +138,6 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.nushell;
     packages = [
-      pkgs.google-chrome
       pkgs.home-manager
     ];
   };
@@ -217,6 +203,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.11"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
 
 }

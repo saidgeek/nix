@@ -14,7 +14,7 @@
 
   home.username = "saidgeek";
   home.homeDirectory = "/home/saidgeek";
-  home.stateVersion = "22.11";
+  home.stateVersion = "24.05";
 
   # TODO: move this to other file to be common
   home.packages = with pkgs; [
@@ -26,6 +26,7 @@
     discord
     fzf
     ripgrep
+    fd
     unzip
     exa
     gcc
@@ -42,8 +43,8 @@
     nodePackages.typescript-language-server
 
     ## python
-    # python3
-    # python310Packages.pip
+    python3
+    python310Packages.pip
 
     ## nix
     rnix-lsp
