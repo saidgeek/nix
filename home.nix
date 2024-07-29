@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }: {
+{ pkgs, ... }: {
 
   imports = [
     ./programs/git.nix
@@ -28,13 +28,13 @@
     ripgrep
     fd
     unzip
-    exa
+    eza
     gcc
     jq
     neovim
     emacsPackages.vterm
     firefox
-    fastfetch
+    google-chrome
 
     # languages 
     ## javascript / typescript
@@ -47,13 +47,16 @@
     python310Packages.pip
 
     ## nix
-    rnix-lsp
+    nil
     nixpkgs-fmt
 
     ## Lua
     luajit
     lua-language-server
     stylua
+
+    ## Rust
+    rustup
   ];
 
   # programs.home-manager.enable = true;

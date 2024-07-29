@@ -3,18 +3,16 @@
     enable = true;
     extraConfig = ''
       return {
-        font = wezterm.font("VictorMono Nerd Font", { weight = "Bold" })
-        font_size = 9.0
-        hide_tab_bar_if_only_one_tab = true
-        tab_bar_at_bottom = true
+        font = wezterm.font("VictorMono Nerd Font", { weight = "Bold" }),
+        font_size = 9.0,
+        hide_tab_bar_if_only_one_tab = true,
+        tab_bar_at_bottom = true,
         window_padding = {
           left = 5,
           right = 5,
           top = 5,
           bottom = 5,
-        }
-
-        -- window_background_opacity = 0.8
+        },
 
         window_frame = {
           border_left_width = "0.2cell",
@@ -25,24 +23,19 @@
           border_right_color = "#cdcdcd",
           border_bottom_color = "#cdcdcd",
           border_top_color = "#cdcdcd",
-        }
+        },
 
-        initial_cols = 160
-        initial_rows = 40
-        window_decorations = "NONE"
-        -- window_decorations = "RESIZE"
-        -- front_end = "OpenGL"
-        -- front_end = "WebGpu"
-        enable_wayland = false
+        initial_cols = 160,
+        initial_rows = 40,
+        window_decorations = "NONE",
+        enable_wayland = false,
 
-        color_scheme = "Github Dark"
+        color_scheme = "GitHub Dark",
         colors = {
           background = "#22272e",
-        }
-        -- color_scheme = "Catppuccin Macchiato"
-        -- default_prog = { "tmux", "new-session", "-A", "-s", "Main" }
+        },
 
-        warn_about_missing_glyphs = true
+        warn_about_missing_glyphs = true,
       }
     '';
   };

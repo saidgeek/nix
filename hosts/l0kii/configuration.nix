@@ -62,7 +62,6 @@
 
   services.xserver.videoDrivers = [ "radeon" "nvidia" ];
   hardware.opengl.enable = true;
-  hardware.opengl.driSupport = true;
   hardware.opengl.driSupport32Bit = true;
 
   # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
@@ -106,7 +105,6 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
