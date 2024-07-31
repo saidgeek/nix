@@ -11,6 +11,7 @@
     ./programs/wezterm.nix
     ./programs/gnome.nix
     ./programs/neovim.nix
+    ./programs/zellij.nix
   ];
 
   home.username = "saidgeek";
@@ -33,6 +34,7 @@
     eza
     gcc
     jq
+    wl-clipboard
     emacsPackages.vterm
     firefox
     google-chrome
