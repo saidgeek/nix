@@ -4,7 +4,7 @@
     package = pkgs.fish;
     shellAliases = {
       # nvim
-      n = "nvim";
+      nv = "nvim";
       # zoxide
       # cd = "z";
       # exa
@@ -27,5 +27,8 @@
       gs = "git switch";
       gsc = "git switch";
     };
+    shellInit = ''
+      set -g fish_greeting
+    '';
   };
 }
