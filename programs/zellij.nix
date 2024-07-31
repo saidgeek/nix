@@ -2,6 +2,7 @@
   programs.zellij = {
     enable = true;
     package = pkgs.zellij;
+    # enableFishIntegration = true;
     settings = {
       # default_layout = "compact";
       mouse_mode = false;

@@ -12,6 +12,8 @@
     ./programs/gnome.nix
     ./programs/neovim.nix
     ./programs/zellij.nix
+    ./programs/fish.nix
+    ./programs/zoxide.nix
   ];
 
   home.username = "saidgeek";
