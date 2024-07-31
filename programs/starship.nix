@@ -11,10 +11,10 @@
         vimcmd_symbol = "[❮](green)";
       };
       nix_shell = {
-        symbol = "❄️";
-        impure_msg = "[!➜](bold red)";
+        symbol = "";
+        impure_msg = " [](bold red)";
         pure_msg = "";
-        unknown_msg = "[?➜](bold green)";
+        unknown_msg = " [](bold green)";
         format = "[$symbol$state](bold blue) ";
       };
       custom.direnv = {
