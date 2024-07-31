@@ -2,9 +2,13 @@
   programs.starship = {
     enable = true;
     settings = {
+      directory = {
+        style = "blue";
+      };
       character = {
-        success_symbol = "[➜](bold green)";
-        error_symbol = "[ ➜](bold red)";
+        success_symbol = "[❯](purple)";
+        error_symbol = "[❯](red)";
+        vimcmd_symbol = "[❮](green)";
       };
       nix_shell = {
         symbol = "❄️";
