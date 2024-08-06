@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports =
     [
@@ -60,15 +60,19 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  services.xserver.videoDrivers = [ "radeon" "nvidia" ];
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport32Bit = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  # services.xserver.videoDrivers = [ "radeon" "nvidia" ];
+  # hardware.opengl.enable = true;
+  # hardware.opengl.driSupport32Bit = true;
+  hardware.graphics = {
+    enable = true;
+  };
 
   # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
   hardware.nvidia.modesetting.enable = true;
-  hardware.nvidia.prime.offload.enable = true;
+  # hardware.nvidia.prime.offload.enable = true;
   hardware.nvidia.prime.nvidiaBusId = "PCI:1:0:0";
-  hardware.nvidia.prime.amdgpuBusId = "PCI:6:0:0";
+  # hardware.nvidia.prime.amdgpuBusId = "PCI:6:0:0";
 
   hardware.logitech.wireless.enable = true;
   hardware.logitech.wireless.enableGraphical = true;
@@ -93,9 +97,9 @@
 
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "latam,us";
-    xkbVariant = ",altgr-intl";
+    variant = ",altgr-intl";
   };
 
   # Configure console keymap
@@ -141,7 +145,7 @@
   };
 
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     google-fonts
     noto-fonts
     noto-fonts-emoji
