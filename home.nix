@@ -40,6 +40,7 @@
     emacsPackages.vterm
     firefox
     google-chrome
+    slack
 
     # languages 
     ## javascript / typescript
