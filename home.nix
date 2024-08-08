@@ -41,6 +41,7 @@
     firefox
     google-chrome
     slack
+    postman
 
     # languages 
     ## javascript / typescript
