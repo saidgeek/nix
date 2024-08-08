@@ -64,6 +64,9 @@
 
     ## Rust
     rustup
+
+    ## mongodb
+    mongodb-compass
   ];
 
   # programs.home-manager.enable = true;
