@@ -27,7 +27,7 @@
 
         initial_cols = 160,
         initial_rows = 40,
-        window_decorations = "NONE",
+        window_decorations = "INTEGRATED_BUTTONS|RESIZE",
         enable_wayland = false,
 
         color_scheme = "GitHub Dark",
