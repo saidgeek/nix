@@ -61,11 +61,6 @@
   "terminal.integrated.defaultProfile.linux": "nushell",
   "terminal.integrated.fontFamily": "NotoMono Nerd Font",
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.profiles.linux": {
-    "nushell": {
-      "path": "/home/saidgeek/.nix-profile/bin/nu"
-    }
-  },
   "terminal.integrated.scrollback": 100000000,
   "todohighlight.isEnable": true,
   "todohighlight.keywords": [
@@ -102,14 +97,15 @@
   "window.dialogStyle": "custom",
   "window.menuBarVisibility": "toggle",
   "window.titleBarStyle": "custom",
-  "workbench.activityBar.visible": false,
   "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": "single",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "editor.lineNumbers": "relative",
   "terminal.integrated.tabs.location": "left",
   "window.zoomLevel": 1,
-  "workbench.iconTheme": "catppuccin-macchiato",
-  "workbench.colorTheme": "Andromeda Bordered"
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.activityBar.location": "top",
+  "window.customTitleBarVisibility": "auto"
 }

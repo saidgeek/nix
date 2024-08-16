@@ -9,11 +9,13 @@
     ./programs/emacs.nix
     ./programs/tmux
     ./programs/wezterm.nix
+    ./programs/alacritty.nix
     ./programs/gnome.nix
     ./programs/neovim.nix
     ./programs/zellij.nix
     ./programs/fish.nix
     ./programs/zoxide.nix
+    ./programs/vscode
   ];
 
   home.username = "saidgeek";
@@ -42,6 +44,7 @@
     google-chrome
     slack
     postman
+    zed-editor
 
     # languages 
     ## javascript / typescript

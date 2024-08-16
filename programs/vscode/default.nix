@@ -57,8 +57,8 @@ let
   ];
 in
 {
-  xdg.configFile."Code/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/programs/vscode/settings.json";
-  xdg.configFile."Code/User/keybindings.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/programs/vscode/keybindings.json";
+  xdg.configFile."Code/User/settings.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dev/nix/programs/vscode/settings.json";
+  xdg.configFile."Code/User/keybindings.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dev/nix/programs/vscode/keybindings.json";
 
   programs.vscode = {
     enable = true;
