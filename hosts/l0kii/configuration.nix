@@ -173,6 +173,7 @@
     gcc
     xclip
     vim
+    zed-editor
   ];
 
   virtualisation = {

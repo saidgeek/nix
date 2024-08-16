@@ -44,7 +44,6 @@
     google-chrome
     slack
     postman
-    zed-editor
 
     # languages 
     ## javascript / typescript
